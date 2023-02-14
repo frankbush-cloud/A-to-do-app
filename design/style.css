@@ -1,0 +1,316 @@
+::root{
+    /* primary */
+    --Bright-Blue: hsl(220, 98%, 61%);
+--Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+--Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+--Light-Grayish-Blue: hsl(233, 11%, 84%);
+--Dark-Grayish-Blue: hsl(236, 9%, 61%);
+--Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+--Very-Dark-Blue: hsl(235, 21%, 11%);
+--Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+--Light-Grayish-Blue: hsl(234, 39%, 85%);
+--Light-Grayish-Blue: hsl(236, 33%, 92%);
+--Dark-Grayish-Blue: hsl(234, 11%, 52%);
+--Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+--Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header-pic{
+    width: 100%;
+}
+
+.wraper{
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+.rest{
+    width: 350px;
+    /* height: 100%; */
+    /* background: hsl(235, 19%, 35%); */
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+    left: 20%;
+    color: white;
+}
+.to-do{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding-block: 5px;
+}
+
+.sun{
+    width: 20px;
+    height: 20px;
+}
+.sun:hover{
+   cursor: pointer;
+}
+
+/* activites */
+
+.activity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    padding-inline: 10px;
+    padding-block: 10px;
+    font-size: 12px;
+    /* max-width: 300px; */
+    flex: 1 1 0%;
+}
+.create-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    /* width: 300px; */
+    
+}
+
+.inputText{
+    color: white;
+   border: 1px solid transparent;
+   /* overflow-x: scroll; */
+    width: 90%;
+    height: auto;
+    word-wrap: break-word;
+    overflow: wrap;
+    /* white-space: nowrap;*/
+}
+.cancel-create:hover{
+    cursor: pointer;
+}
+.icon-check{
+    display: none;
+}
+.btn1{
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.btn0{
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; 
+}
+.btn1:hover{
+    cursor: pointer;
+    background: hsl(220, 98%, 61%);
+}
+.btn0:hover {
+    cursor: pointer;
+    background: hsl(220, 98%, 61%); 
+}
+.icon-check{
+    width: 7px;
+    height: 7px;
+    text-align: center;
+}
+.cross{
+    width: 10px;
+    height: 10px;
+    color: white;
+}
+
+.cancel:hover{
+    cursor: pointer;
+}
+
+.activity-one{
+    margin-block: 20px;
+    background: hsl(235, 24%, 19%);
+}
+
+.to-do-lists{
+    background: hsl(235, 24%, 19%);
+    height: 100%;
+}
+
+.bottom-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    background: hsl(235, 24%, 19%);
+    padding: 10px;
+    text-transform: capitalize;
+    padding-block-end: 20px;
+    justify-content: space-between;
+}
+.all,
+.active,
+.clear-completed{
+    cursor: pointer;
+}
+.items-left{
+    font-size: 10px;
+}
+
+.all{
+    color: blue;
+}
+
+#check-task{
+    display: none;
+}
+
+#input-task{
+   outline: none;
+   color: black;
+   
+}
+input:focus {
+   
+    border-color: blue;
+  }
+
+.crosedtask{
+    color: white;
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+
+  .cancel{
+    display: none;
+  }
+ 
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width: 400px){
+    .wraper{
+        background: orange;
+    } 
+        .rest{
+            width: 300px;
+            
+            background: hotpink;
+            top: 20px;
+            left: 10%;
+        }
+        .bottom-part{
+            font-size: 10px;
+        }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .wraper{
+    background: hotpink;
+} 
+    .rest{
+        width: 400px;
+        
+        background: darkblue;
+        top: 40px;
+        left: 20%;
+    }
+    .bottom-part{
+        font-size: 14px;
+    }
+    .inputText{
+        /* width: 350px; */
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .wraper{
+        background: darkblue;
+    } 
+    .rest{
+        width: 450px;
+        
+        background: hotpink;
+        top: 40px;
+        left: 25%;
+    }
+    .bottom-part{
+        font-size: 16px;
+    }
+    .inputText{
+        /* width: 400px; */
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .wraper{
+        background: darkgreen;
+    } 
+    .rest{
+        width: 450px;
+        
+        background: darkcyan;
+        top: 40px;
+        left: 30%;
+    }
+    .bottom-part{
+        font-size: 15px;
+    }
+    .inputText{
+        /* width: 400px; */
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .wraper{
+        background: darkturquoise;
+    }
+    .rest{
+        width: 450px;
+       
+        background: blanchedalmond;
+        top: 40px;
+        left: 30%;
+    } 
+    .bottom-part{
+        font-size: 16px;
+    }
+    .inputText{
+        /* width: 400px; */
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .wraper{
+        background: red;
+    } 
+    .bottom-part{
+        font-size: 16px;
+    }
+}
